@@ -1,0 +1,2 @@
+# AI usage
+Claude (Anthropic) was used to read the article and assignment, draft the critique, design the experiment, and write the code, tests and PDF builder. It could not run the model experiment in its sandbox (no network/GPU/weights); only `tests/test_metrics.py` was executed. All design decisions should be reviewed by the author before submission, and the results table filled in from a real run.

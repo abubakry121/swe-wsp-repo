@@ -1,6 +1,4 @@
-# swe-wsp-repo
-Position as AI Infrastructure Application Expert (SELLMA)
-Swedish repetition-loop weight edit vs. controls
+# Swedish repetition-loop weight edit vs controls
 ```
 pip install -r requirements.txt
 python tests/test_metrics.py
