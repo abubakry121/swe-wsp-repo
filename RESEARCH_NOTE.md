@@ -33,15 +33,27 @@ Small multilingual models often degrade into repetition when continuing Swedish 
 - **Metrics:** loop rate (4-gram repeat ratio ≥0.3), mean repeat ratio, Swedish function-word share (crude language ID), perplexity on held-out paragraphs (regression check). Paired bootstrap CIs over prompts. Seed 0; commands in README.
 - **Not included (time):** LoRA/steering-vector comparison, downstream Swedish benchmarks (e.g. ScandEval/SuperLim) and human fluency judgements. A repeat-ratio drop does not prove better text; the regression checks are weak proxies.
 
-## 4. Results
+## 4. Experimental Results
 
-chosen: {'layer': 18, 'alpha': 0.5, 'loop_rate': 0.0, 'ppl': 45.494400788534136} | base PPL: 45.13
-condition                  loop   rep4   sv    ppl   loop-reduction [95% CI]
-unchanged                  0.00  0.000  0.69  45.1   +0.00 [+0.00,+0.00]
-repetition_penalty_1.1     0.00  0.000  0.69  45.1   +0.00 [+0.00,+0.00]
-no_repeat_ngram_4          0.00  0.000  0.69  45.1   +0.00 [+0.00,+0.00]
-targeted_edit              0.00  0.000  0.68  45.5   +0.00 [+0.00,+0.00]
-random_edit_0              0.00  0.000  0.68  45.1   +0.00 [+0.00,+0.00]
+### Selected Configuration
+
+| Parameter | Value |
+|---|---:|
+| Layer | 18 |
+| Alpha | 0.5 |
+| Loop Rate | 0.0 |
+| Perplexity (PPL) | 45.4944 |
+| Base PPL | 45.13 |
+
+### Comparison Across Experimental Conditions
+
+| Condition | Loop | Rep4 | SV | PPL | Loop Reduction (95% CI) |
+|---|---:|---:|---:|---:|---:|
+| Unchanged | 0.00 | 0.000 | 0.69 | 45.1 | +0.00 [+0.00, +0.00] |
+| Repetition Penalty 1.1 | 0.00 | 0.000 | 0.69 | 45.1 | +0.00 [+0.00, +0.00] |
+| No Repeat N-gram 4 | 0.00 | 0.000 | 0.69 | 45.1 | +0.00 [+0.00, +0.00] |
+| Targeted Edit | 0.00 | 0.000 | 0.68 | 45.5 | +0.00 [+0.00, +0.00] |
+| Random Edit 0 | 0.00 | 0.000 | 0.68 | 45.1 | +0.00 [+0.00, +0.00] |
 
 ## 5. Provisional recommendation (to be updated with results)
 
