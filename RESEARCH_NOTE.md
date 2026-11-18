@@ -35,15 +35,13 @@ Small multilingual models often degrade into repetition when continuing Swedish 
 
 ## 4. Results
 
-| Condition | Loop rate | Rep-4 | Sv. share | PPL |
-|---|---|---|---|---|
-| Unchanged | TBD | TBD | TBD | TBD |
-| repetition_penalty 1.1 | TBD | TBD | TBD | TBD |
-| no_repeat_ngram 4 | TBD | TBD | TBD | TBD |
-| **Targeted edit** | TBD | TBD | TBD | TBD |
-| Random edit (mean of 5) | TBD | TBD | TBD | TBD |
-
-*Fill from `results/results.json`; paste 3-5 matched examples from `examples.json`.*
+chosen: {'layer': 18, 'alpha': 0.5, 'loop_rate': 0.0, 'ppl': 45.494400788534136} | base PPL: 45.13
+condition                  loop   rep4   sv    ppl   loop-reduction [95% CI]
+unchanged                  0.00  0.000  0.69  45.1   +0.00 [+0.00,+0.00]
+repetition_penalty_1.1     0.00  0.000  0.69  45.1   +0.00 [+0.00,+0.00]
+no_repeat_ngram_4          0.00  0.000  0.69  45.1   +0.00 [+0.00,+0.00]
+targeted_edit              0.00  0.000  0.68  45.5   +0.00 [+0.00,+0.00]
+random_edit_0              0.00  0.000  0.68  45.1   +0.00 [+0.00,+0.00]
 
 ## 5. Provisional recommendation (to be updated with results)
 
